@@ -1,55 +1,7 @@
-// window.addEventListener('DOMContentLoaded', () => {
-//     let boxCollection = Array.from(document.querySelectorAll('.container div'))
-//     boxCollection.forEach((box) => {
-//         box.addEventListener('click', play)
-//     });
-
-//     let board = [
-//         0, 1, 2,
-//         3, 4, 5,
-//         6, 7, 8,
-//     ];
-
-//     let size = board.length;
-
-//     function play(e) {
-//         let currentBox = e.currentTarget;
-//         debugger
-//         if (!currentBox.style['background-color'] && (!'closed'.includes(currentBox.classList))) {
-//             currentBox.style['background-color'] = 'green';
-//             currentBox.classList.add('closed');
-//             currentIndex = currentBox.classList.value.split(' ')[1].split('-')[1];
-//             let removed = board.splice(+currentIndex,1)
-//             console.log(removed)
-//             console.log(board)
-
-//             let size = board.length;
-//             let randomIndex = Math.floor(size * Math.random());
-//             debugger
-
-//             let nextMove = boxCollection[randomIndex]
-//             console.log(boxCollection[randomIndex])
-
-//             do {
-//                 console.log(typeof(randomIndex))
-//             }
-//             while(!randomIndex.includes(board));
-
-//             // setTimeout(() => {
-
-
-
-//             // }, 500);
-
-
-//         }
-//     }
-
-
-// });
-
 window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('reset-btn').addEventListener('click', resetBoard = () => { location.reload(); });
     const boxCollection = Array.from(document.querySelectorAll('.container div'));
+
     let board = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     let playerTurn = true;
 
@@ -58,20 +10,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     function play(e) {
-        if (!playerTurn)
-            return;
+        if (!playerTurn) return;
 
         let currentBox = e.currentTarget;
 
-        if (!currentBox.style.backgroundColor && !currentBox.classList.contains('closed')) {
+        if (!currentBox.style.backgroundColor) {
             currentBox.style.backgroundColor = 'red';
-            currentBox.classList.add('closed');
-
             let currentIndex = parseInt(currentBox.classList.value.split(' ')[1].split('-')[1]);
             let removedIndex = board.indexOf(currentIndex);
-
             board.splice(removedIndex, 1);
-
             playerTurn = false;
 
             let randomIndex;
@@ -87,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
                         if (!nextMove) return;
 
                         nextMove.style.backgroundColor = 'green';
-                        nextMove.classList.add('closed');
                         board.splice(randomIndex, 1);
                         playerTurn = true;
                     }, 500);
@@ -97,4 +43,3 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
