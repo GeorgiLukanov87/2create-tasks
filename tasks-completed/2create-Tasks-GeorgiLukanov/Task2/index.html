@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task2</title>
+</head>
+
+<body>
+    <main class="background">
+        <section class="container">
+
+            <div class="box index-0"></div>
+            <div class="box index-1"></div>
+            <div class="box index-2"></div>
+
+            <div class="box index-3"></div>
+            <div class="box index-4"></div>
+            <div class="box index-5"></div>
+
+            <div class="box index-6"></div>
+            <div class="box index-7"></div>
+            <div class="box index-8"></div>
+
+        </section>
+
+        <section class="btn-section">
+            <button id="reset-btn">Reset</button>
+        </section>
+
+    </main>
+
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('reset-btn').addEventListener('click', resetBoard = () => { location.reload(); });
+        const boxCollection = Array.from(document.querySelectorAll('.container div'));
+
+        let board =
+            [
+                0, 1, 2,
+                3, 4, 5,
+                6, 7, 8
+            ];
+
+        let playerTurn = true;
+
+        boxCollection.forEach((box) => {
+            box.addEventListener('click', play);
+        });
+
+        function play(e) {
+            if (!playerTurn) return;
+            let currentBox = e.currentTarget;
+
+            if (!currentBox.style.backgroundColor) {
+                currentBox.style.backgroundColor = 'red';
+
+                let currentIndex = parseInt(currentBox.classList.value.split(' ')[1].split('-')[1]);
+                let removedIndex = board.indexOf(currentIndex);
+                board.splice(removedIndex, 1);
+                playerTurn = false;
+
+                if (!board.length) return;
+
+                let randomIndex = Math.floor(Math.random() * board.length);
+                let nextMoveIndex = board[randomIndex];
+                let nextMove = boxCollection[nextMoveIndex];
+
+                setTimeout(() => {
+                    nextMove.style.backgroundColor = 'green';
+                    board.splice(randomIndex, 1);
+                    playerTurn = true;
+                }, 500);
+                return;
+            }
+        }
+    });
+</script>
+
+</html>

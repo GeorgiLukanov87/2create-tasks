@@ -1,0 +1,174 @@
+@media only screen and (max-width: 1350px) {
+    .contact-p6 {
+        margin-bottom: 20px;
+    }
+
+    .contact-line {
+        width: unset;
+        margin: 18px 0;
+    }
+
+    .contact-wrapper {
+        justify-content: space-between;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-line {
+        margin: 15px 10%;
+    }
+
+    .hero-text {
+        margin-top: 15%;
+        font-size: 50px;
+        line-height: unset;
+    }
+
+    .content {
+        position: unset;
+        align-items: center;
+    }
+
+    .content>p {
+        width: 65%;
+        text-align: center;
+    }
+
+    .hero-button {
+        width: 160px;
+        height: 42px;
+        font-weight: bold;
+    }
+
+    .contact-working-hours {
+        padding-bottom: 16px;
+    }
+
+    .contact-article>h3 {
+        padding-top: unset;
+    }
+
+
+    .contact-article>h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .contact-article>h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .contact-article p {
+        text-align: center;
+    }
+
+    .contact-p1 {
+        margin: 0 15%;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    .hero-button {
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1120px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-wrapper2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    .footer-wrapper>img {
+        margin-bottom: 16px;
+    }
+
+    .footer-brand {
+        margin-bottom: 10px;
+    }
+
+    .hero-button {
+        margin-top: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    .hero-text {
+        font-size: 36px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-ul {
+        margin-top: 20px;
+    }
+
+    .hero-button {
+        height: 32px;
+
+    }
+
+    .hero-text {
+        margin-bottom: 7.5%;
+        font-size: 50px;
+        line-height: unset;
+    }
+
+    #gmap_canvas {
+        width: 400px;
+        height: 300px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-article>h3 {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 16px;
+    }
+
+    .footer-ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-wrapper>img {
+        width: 125px;
+        height: 30px;
+    }
+
+    .footer-socials li a i {
+        width: 16px;
+        height: 16px;
+    }
+
+
+}

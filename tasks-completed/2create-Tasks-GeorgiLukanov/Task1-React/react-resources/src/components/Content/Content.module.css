@@ -1,0 +1,47 @@
+.content {
+    position: absolute;
+    width: 705px;
+    height: 251px;
+    left: 228px;
+    top: 130px;
+    color: #FFFFFF;
+}
+
+.content>p {
+    position: absolute;
+    width: 705px;
+    height: 78px;
+    top: 95px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.hero-text {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.hero-button {
+    position: absolute;
+    width: 160px;
+    height: 48px;
+    top: 200px;
+    padding: 16px, 24px, 16px, 24px;
+    border-radius: 32px;
+    gap: 8px;
+    background-color: #243A5A;
+    color: #FFFFFF;
+    border: none;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+    background-color: #172f53;
+}
